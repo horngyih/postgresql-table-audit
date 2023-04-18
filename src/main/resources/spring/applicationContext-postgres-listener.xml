@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+">
+    <bean id="dateSource" class="com.impossibl.postgres.jdbc.PGDataSource">
+        <property name="host" value="localhost"/>
+        <property name="port" value="5555" />
+        <property name="user" value="postgres" />
+        <property name="password" value="ubi123" />
+        <property name="databaseName" value="Mobile"/>
+    </bean>
+
+    <bean id="changeDBEventListener" class="com.ubicompsystem.experiments.postgres.channel.PGChannelListener" init-method="init" destroy-method="stop">
+        <constructor-arg index="0" type="javax.sql.DataSource" ref="dateSource"/>
+        <constructor-arg index="1" type="java.lang.String" value="change_db_event" />
+    </bean>
+
+
+</beans>
