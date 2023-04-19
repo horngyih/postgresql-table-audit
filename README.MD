@@ -56,6 +56,15 @@ is the pgjdbc-ng driver.
 
 A simple example implementation is implemented as the Unit Test `AuditListenerTest`.
 
+## Future Improvements
+
+`AuditControl` is currently a simple table used as a 'control' surface for users to trigger 
+the addition or removal of audit triggers on target tables.
+
+Future improvement could include enhancing the audit triggers to listen to ONLY specific changes
+on the target table and the control for these specific changes could be pare of the `AuditControl`
+table row.
+
 ## References
 Initial trigger code was taken from the following source:-
 https://gist.github.com/goliatone/5fbeb1912e5937e8e3cf94618be9bebf
