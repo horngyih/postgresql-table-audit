@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ubicompsystem.experiments</groupId>
-    <artifactId>postgres-channel-listener</artifactId>
+    <artifactId>postgres-table-audit</artifactId>
     <version>1.0</version>
 
     <properties>

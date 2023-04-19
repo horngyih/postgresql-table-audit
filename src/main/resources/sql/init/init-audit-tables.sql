@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS "AuditControl" (
+    "AuditTable" VARCHAR(255) NOT NULL UNIQUE,
+    "CreatedOn" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS "AuditTrail" (
+    timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "Table" VARCHAR(255) NOT NULL,
+    "Action" VARCHAR(20) NOT NULL,
+    "Record" jsonb,
+    "PreviousRecord" jsonb
+);
