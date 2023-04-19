@@ -67,6 +67,7 @@ table row.
 
 ## References
 Initial trigger code was taken from the following source:-
+
 https://gist.github.com/goliatone/5fbeb1912e5937e8e3cf94618be9bebf
 
 https://wiki.postgresql.org/wiki/Audit_trigger_91plus
