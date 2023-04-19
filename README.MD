@@ -54,4 +54,8 @@ is the pgjdbc-ng driver.
         <version>0.8.9</version>
     </dependency>
 
-A simple example implementation is implemented as the Unit Test `AuditListenerTest`.:wq
+A simple example implementation is implemented as the Unit Test `AuditListenerTest`.
+
+## References
+Initial trigger code was taken from the following source:-
+https://gist.github.com/goliatone/5fbeb1912e5937e8e3cf94618be9bebf
